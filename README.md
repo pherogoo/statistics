@@ -34,5 +34,3 @@ Contributions to this repository are welcome. If you have additional statistical
 ## Feedback and Support
 
 If you have any questions, suggestions, or need support, please [open an issue](https://github.com/pherogoo/statistics/issues)
-
-*Please note that this README file and python files are AI-generated and may not be perfect. Feel free to make any necessary improvements.*
