@@ -4,7 +4,7 @@ This repository contains a collection of Python programs for performing various 
 
 ## Overview
 
-The purpose of this repository is to provide a central location for statistical calculations. Each program focuses on a specific statistical measure or method.
+The purpose of this repository is to provide a central location for statistical calculations. Each program focuses on a specific statistical measure or method commonly used in Elementary Statistics, with some examples derived from real-world scenarios.
 
 ## File Structure
 
