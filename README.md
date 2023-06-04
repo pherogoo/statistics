@@ -22,10 +22,10 @@ To use the statistical calculations, follow these steps:
 
 ### Example Usage
 
-'''
+```python
 cd /path/to/repo/caculate
 python program_name.py
-'''
+```
 
 ## Contributing
 
