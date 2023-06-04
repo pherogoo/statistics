@@ -10,7 +10,7 @@ The purpose of this repository is to provide a central location for statistical 
 
 The repository is organized as follows:
 
-- `cacluate/`: This folder contains individual Python programs for specific statistical calculations.
+- [`cacluate/`](https://github.com/pherogoo/statistics/tree/main/calculate): This folder contains individual Python programs for specific statistical calculations.
 
 ## Usage
 
