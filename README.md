@@ -10,7 +10,7 @@ The purpose of this repository is to provide a central location for statistical 
 
 The repository is organized as follows:
 
-- [`cacluate/`](https://github.com/pherogoo/statistics/tree/main/calculate): This folder contains individual Python programs for specific statistical calculations.
+- [`calculate/`](https://github.com/pherogoo/statistics/tree/main/calculate): This folder contains individual Python programs for specific statistical calculations.
 
 ## Usage
 
@@ -22,6 +22,11 @@ To use the statistical calculations, follow these steps:
 
 ### Example Usage
 
+'''
+cd /path/to/repo/caculate
+python program_name.py
+'''
+
 ## Contributing
 
 Contributions to this repository are welcome. If you have additional statistical calculations or improvements to existing programs, feel free to submit a pull request.
@@ -29,3 +34,5 @@ Contributions to this repository are welcome. If you have additional statistical
 ## Feedback and Support
 
 If you have any questions, suggestions, or need support, please [open an issue](https://github.com/pherogoo/statistics/issues)
+
+*Please note that this README file and python files are AI-generated and may not be perfect. Feel free to make any necessary improvements.*
