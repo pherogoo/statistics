@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Box Plot with 5-Number Summary using Plotly</title>
+  <script src="https://cdn.plot.ly/plotly-2.3.1.min.js"></script>
+</head>
+
+<body>
+  <div id="boxplot"></div>
+
+  <script>
+    // Given data
+    var ratings = [3.0, 3.0, 4.0, 4.5, 4.5, 4.5, 5.5, 5.5, 5.5, 5.5, 5.5, 6.5, 6.5, 7.0, 7.0, 7.0, 7.5, 7.5, 7.5, 7.5];
+
+    // Calculate the 5-number summary
+    var min_val = Math.min(...ratings);
+    var q1 = percentile(ratings, 25);
+    var median = percentile(ratings, 50);
+    var q3 = percentile(ratings, 75);
+    var max_val = Math.max(...ratings);
+
+    // Print the 5-number summary
+    console.log("The 5-number summary is:");
+    console.log("1:", min_val);
+    console.log("2:", q1);
+    console.log("3:", median);
+    console.log("4:", q3);
+    console.log("5:", max_val);
+
+    // Function to calculate percentile
+    function percentile(arr, p) {
+      arr.sort(function(a, b) {
+        return a - b;
+      });
+      var index = (p / 100) * (arr.length - 1);
+      var floor = Math.floor(index);
+      var ceil = Math.ceil(index);
+      if (floor === ceil) {
+        return arr[floor];
+      }
+      var d0 = arr[floor] * (ceil - index);
+      var d1 = arr[ceil] * (index - floor);
+      return d0 + d1;
+    }
+
+    // Create the box plot
+    var data = [{
+      type: 'box',
+      x: ratings,
+      boxpoints: 'all',
+      jitter: 0.3,
+      pointpos: -1.8,
+      marker: {
+        color: 'rgb(7,40,89)'
+      },
+      line: {
+        color: 'rgb(7,40,89)'
+      },
+      fillcolor: 'rgba(0,0,0,0)'
+    }];
+
+    var layout = {
+      title: 'Box Plot of Ratings',
+      xaxis: {
+        title: 'Ratings',
+        zeroline: false
+      },
+      yaxis: {
+        autorange: true,
+        showgrid: true,
+        zeroline: false,
+        gridcolor: 'rgb(255, 255, 255)',
+        gridwidth: 1
+      },
+      margin: {
+        l: 40,
+        r: 30,
+        b: 80,
+        t: 100
+      },
+      paper_bgcolor: 'rgb(243, 243, 243)',
+      plot_bgcolor: 'rgb(243, 243, 243)',
+      showlegend: false
+    };
+
+    Plotly.newPlot('boxplot', data, layout);
+  </script>
+</body>
+
+</html>
