@@ -32,7 +32,7 @@
       for (let i = 0; i < numCircles; i++) {
         let x = cos(i * angle) * radius;
         let y = sin(i * angle) * radius;
-        let circleSize = map(mouseX, 0, width, 10, 100);
+        let circleSize = map(mouseX, 0, width, 1, 400);
         ellipse(x, y, circleSize, circleSize);
       }
     }
