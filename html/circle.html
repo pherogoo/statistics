@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+  <title>Circular Pattern</title>
+</head>
+<body>
+  <script>
+    function setup() {
+      createCanvas(windowWidth, windowHeight);
+      background(0);
+      noFill();
+      stroke(255);
+    }
+
+    function draw() {
+      background(0);
+      translate(width / 2, height / 2);
+
+      let numCircles = 50;
+      let radius = 100;
+      let angle = TWO_PI / numCircles;
+
+      for (let i = 0; i < numCircles; i++) {
+        let x = cos(i * angle) * radius;
+        let y = sin(i * angle) * radius;
+        let circleSize = map(mouseX, 0, width, 10, 100);
+        ellipse(x, y, circleSize, circleSize);
+      }
+    }
+  </script>
+</body>
+</html>
